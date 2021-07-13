@@ -2,6 +2,7 @@ import SwiftUI
 
 struct NewReminderButtonView: View {
   @Binding var isShowingCreateModal: Bool
+  @Environment(\.managedObjectContext) var viewContext
   
   var body: some View {
     Button(action: { self.isShowingCreateModal.toggle() }) {
@@ -12,6 +13,7 @@ struct NewReminderButtonView: View {
         .foregroundColor(.red)
     }.sheet(isPresented: $isShowingCreateModal) {
       CreateReminderView()
+        .environment(\.managedObjectContext, self.viewContext)
     }
   }
 }

@@ -1,4 +1,5 @@
 import SwiftUI
+import CoreData
 
 enum ReminderPriority: Int16, CaseIterable {
   case none = 0
@@ -29,6 +30,7 @@ extension ReminderPriority {
 
 struct CreateReminderView: View {
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+  @Environment(\.managedObjectContext) var viewContext: NSManagedObjectContext
   
   // MARK: - State -
   @State var text: String = ""
@@ -71,6 +73,8 @@ struct CreateReminderView: View {
       .navigationBarTitle(Text("Create Event"), displayMode: .inline)
       .navigationBarItems(trailing:
         Button(action: {
+          Reminder.createWith(title: self.text, notes: self.notes, date: self.dueDate, priority: self.priority, using: self.viewContext)
+          
           self.presentationMode.wrappedValue.dismiss()
         }) {
           Text("Save")
