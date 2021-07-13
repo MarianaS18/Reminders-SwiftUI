@@ -13,6 +13,7 @@
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
+		56F8600D269D6F2300DFE3D2 /* Reminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56F8600B269D6F2300DFE3D2 /* Reminders.xcdatamodeld */; };
 		97FFF14C2422F7BC0008D6E0 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FFF14B2422F7BC0008D6E0 /* RemindersView.swift */; };
 		97FFF16E2422F8EF0008D6E0 /* NewReminderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FFF16D2422F8EF0008D6E0 /* NewReminderButtonView.swift */; };
 		97FFF1702422F9290008D6E0 /* CreateReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FFF16F2422F9290008D6E0 /* CreateReminderView.swift */; };
@@ -30,6 +31,7 @@
 		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56F8600C269D6F2300DFE3D2 /* Reminders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reminders.xcdatamodel; sourceTree = "<group>"; };
 		97FFF14B2422F7BC0008D6E0 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		97FFF16D2422F8EF0008D6E0 /* NewReminderButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderButtonView.swift; sourceTree = "<group>"; };
 		97FFF16F2422F9290008D6E0 /* CreateReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReminderView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
 				18D775CE22AD944400AE281E /* Info.plist */,
 				18D775C822AD944400AE281E /* Preview Content */,
+				56F8600B269D6F2300DFE3D2 /* Reminders.xcdatamodeld */,
 			);
 			path = "Reminders-SwiftUI";
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				97FFF1742422FBE50008D6E0 /* ReminderStatusView.swift in Sources */,
 				97FFF1702422F9290008D6E0 /* CreateReminderView.swift in Sources */,
 				18D775C122AD944300AE281E /* AppDelegate.swift in Sources */,
+				56F8600D269D6F2300DFE3D2 /* Reminders.xcdatamodeld in Sources */,
 				97FFF1722422F98D0008D6E0 /* ReminderPrioritySelectionView.swift in Sources */,
 				18D775C322AD944300AE281E /* SceneDelegate.swift in Sources */,
 				97FFF14C2422F7BC0008D6E0 /* RemindersView.swift in Sources */,
@@ -384,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		56F8600B269D6F2300DFE3D2 /* Reminders.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				56F8600C269D6F2300DFE3D2 /* Reminders.xcdatamodel */,
+			);
+			currentVersion = 56F8600C269D6F2300DFE3D2 /* Reminders.xcdatamodel */;
+			path = Reminders.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18D775B522AD944300AE281E /* Project object */;
 }
