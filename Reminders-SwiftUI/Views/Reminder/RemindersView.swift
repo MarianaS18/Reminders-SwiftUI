@@ -2,7 +2,7 @@ import SwiftUI
 
 struct RemindersView: View {
   @State var isShowingCreateModal: Bool = false
-  let fetchRequest = Reminder.completedRemindersFetchRequest()
+  var fetchRequest: FetchRequest<Reminder>
   var reminders: FetchedResults<Reminder> { return fetchRequest.wrappedValue }
   
   let reminderList: ReminderList
@@ -11,7 +11,7 @@ struct RemindersView: View {
     VStack {
       List {
         Section {
-          ForEach(reminderList.reminders, id: \.self) { reminder in
+          ForEach(reminders, id: \.self) { reminder in
             ReminderRow(reminder: reminder)
           }
         }
@@ -24,6 +24,11 @@ struct RemindersView: View {
       .padding(.leading)
     }
     .navigationBarTitle(Text("Reminders"))
+  }
+  
+  init(reminderList: ReminderList) {
+    self.reminderList = reminderList
+    self.fetchRequest = Reminder.reminders(in: reminderList)
   }
 }
 
