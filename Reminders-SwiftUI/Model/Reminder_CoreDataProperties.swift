@@ -26,4 +26,16 @@ extension Reminder {
   static func basicFatchRequest() -> FetchRequest<Reminder> {
     FetchRequest(entity: Reminder.entity(), sortDescriptors: [])
   }
+  
+  static func sortedFetchRequest() -> FetchRequest<Reminder> {
+    let dateSortDescriptor = NSSortDescriptor(key: "dueDate", ascending: false)
+    return FetchRequest(entity: Reminder.entity(), sortDescriptors: [dateSortDescriptor])
+  }
+  
+  static func fetchRequestSortedByTitleAndPriority() -> FetchRequest<Reminder> {
+    let titleSortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+    let prioritySortDescriptor = NSSortDescriptor(key: "priority", ascending: false)
+    return FetchRequest(entity: Reminder.entity(), sortDescriptors: [titleSortDescriptor, prioritySortDescriptor])
+  }
+  
 }
