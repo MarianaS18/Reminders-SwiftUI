@@ -8,11 +8,13 @@ extension Reminder {
   @NSManaged var dueDate: Date?
   @NSManaged var priority: Int16
   @NSManaged var list: ReminderList
-  
+  @NSManaged var tags: Set<Tag>?
+
   static func createWith(title: String,
                          notes: String?,
                          date: Date?,
                          priority: ReminderPriority,
+                         tags: Set<Tag> = [],
                          in list: ReminderList,
                          using context: NSManagedObjectContext) {
     let reminder = Reminder(context: context)
@@ -20,6 +22,7 @@ extension Reminder {
     reminder.notes = notes
     reminder.dueDate = date
     reminder.priority = priority.rawValue
+    reminder.tags = tags
     reminder.list = list
     
     do {

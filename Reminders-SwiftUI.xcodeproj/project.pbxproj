@@ -13,6 +13,8 @@
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
+		56F8602F269DBEA200DFE3D2 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F8602D269DBEA200DFE3D2 /* Tag+CoreDataClass.swift */; };
+		56F86030269DBEA200DFE3D2 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F8602E269DBEA200DFE3D2 /* Tag+CoreDataProperties.swift */; };
 		97097456242671F200B9B774 /* Reminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97097454242671F200B9B774 /* Reminders.xcdatamodeld */; };
 		97542C92243E3A560063DFDA /* ReminderList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97542C90243E3A560063DFDA /* ReminderList+CoreDataClass.swift */; };
 		97542C93243E3A560063DFDA /* ReminderList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97542C91243E3A560063DFDA /* ReminderList+CoreDataProperties.swift */; };
@@ -38,6 +40,8 @@
 		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56F8602D269DBEA200DFE3D2 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		56F8602E269DBEA200DFE3D2 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		97097455242671F200B9B774 /* Reminders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reminders.xcdatamodel; sourceTree = "<group>"; };
 		97542C90243E3A560063DFDA /* ReminderList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		97542C91243E3A560063DFDA /* ReminderList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderList+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -95,7 +99,6 @@
 				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
 				18D775CE22AD944400AE281E /* Info.plist */,
 				18D775C822AD944400AE281E /* Preview Content */,
-				97097454242671F200B9B774 /* Reminders.xcdatamodeld */,
 			);
 			path = "Reminders-SwiftUI";
 			sourceTree = "<group>";
@@ -121,10 +124,13 @@
 		97A7A5D12438FEDE00FCE56F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				97097454242671F200B9B774 /* Reminders.xcdatamodeld */,
 				97542C90243E3A560063DFDA /* ReminderList+CoreDataClass.swift */,
 				97542C91243E3A560063DFDA /* ReminderList+CoreDataProperties.swift */,
 				97A7A5D22438FEED00FCE56F /* Reminder+CoreDataClass.swift */,
 				97A7A5D42438FF3800FCE56F /* Reminder+CoreDataProperties.swift */,
+				56F8602E269DBEA200DFE3D2 /* Tag+CoreDataProperties.swift */,
+				56F8602D269DBEA200DFE3D2 /* Tag+CoreDataClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,8 +230,10 @@
 			files = (
 				97FFF1742422FBE50008D6E0 /* ReminderStatusView.swift in Sources */,
 				97542C93243E3A560063DFDA /* ReminderList+CoreDataProperties.swift in Sources */,
+				56F86030269DBEA200DFE3D2 /* Tag+CoreDataProperties.swift in Sources */,
 				97FFF1702422F9290008D6E0 /* CreateReminderView.swift in Sources */,
 				18D775C122AD944300AE281E /* AppDelegate.swift in Sources */,
+				56F8602F269DBEA200DFE3D2 /* Tag+CoreDataClass.swift in Sources */,
 				97097456242671F200B9B774 /* Reminders.xcdatamodeld in Sources */,
 				97FFF1722422F98D0008D6E0 /* ReminderPrioritySelectionView.swift in Sources */,
 				18D775C322AD944300AE281E /* SceneDelegate.swift in Sources */,
