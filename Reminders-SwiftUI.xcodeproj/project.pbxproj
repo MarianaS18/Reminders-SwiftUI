@@ -72,6 +72,7 @@
 		18D775BF22AD944300AE281E /* Reminders-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				56F8600E269D786A00DFE3D2 /* Model */,
 				18D775C022AD944300AE281E /* AppDelegate.swift */,
 				18D775C222AD944300AE281E /* SceneDelegate.swift */,
 				97FFF1482422F7170008D6E0 /* Views */,
@@ -91,6 +92,13 @@
 				18D775C922AD944400AE281E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		56F8600E269D786A00DFE3D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		97FFF1482422F7170008D6E0 /* Views */ = {
