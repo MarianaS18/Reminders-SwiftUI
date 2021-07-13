@@ -139,8 +139,8 @@
 				97542C91243E3A560063DFDA /* ReminderList+CoreDataProperties.swift */,
 				97A7A5D22438FEED00FCE56F /* Reminder+CoreDataClass.swift */,
 				97A7A5D42438FF3800FCE56F /* Reminder+CoreDataProperties.swift */,
-				56F8602E269DBEA200DFE3D2 /* Tag+CoreDataProperties.swift */,
 				56F8602D269DBEA200DFE3D2 /* Tag+CoreDataClass.swift */,
+				56F8602E269DBEA200DFE3D2 /* Tag+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

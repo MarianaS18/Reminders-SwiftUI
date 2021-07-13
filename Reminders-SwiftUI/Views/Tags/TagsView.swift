@@ -9,7 +9,7 @@ struct TagsView: View {
         List {
           Section {
             ForEach(self.tags, id: \.self) { tag in
-              Text(tag.title)
+              Text("\(tag.title) (\(tag.reminderCount))")
             }
           }
         }
