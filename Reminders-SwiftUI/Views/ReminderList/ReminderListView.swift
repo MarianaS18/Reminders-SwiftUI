@@ -29,10 +29,40 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
-//
 
-import Foundation
-import CoreData
+import SwiftUI
 
-@objc(ReminderList)
-public class ReminderList: NSManagedObject {}
+extension Color {
+  static var random: Color {
+    return Color(red: Double.random(in: 0...1),
+                 green: Double.random(in: 0...1),
+                 blue: Double.random(in: 0...1))
+  }
+}
+
+struct ReminderListView: View {
+  @Environment(\.managedObjectContext) var viewContext
+  @FetchRequest(sortDescriptors: []) var reminderLists: FetchedResults<ReminderList>
+  
+  var body: some View {
+    VStack {
+      List {
+        Section {
+          ForEach(reminderLists, id:\.self) { reminderList in
+            NavigationLink(destination: RemindersView(reminderList: reminderList)) {
+              CircularImageView(color: .random)
+              Text(reminderList.title)
+            }
+          }
+        }
+      }
+      .listStyle(GroupedListStyle())
+    }
+  }
+}
+
+struct ReminderListView_Previews: PreviewProvider {
+    static var previews: some View {
+        ReminderListView()
+    }
+}

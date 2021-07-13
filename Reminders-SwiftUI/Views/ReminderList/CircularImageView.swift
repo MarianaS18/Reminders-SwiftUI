@@ -29,10 +29,25 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
-//
 
-import Foundation
-import CoreData
+import SwiftUI
 
-@objc(ReminderList)
-public class ReminderList: NSManagedObject {}
+struct CircularImageView: View {
+  var color: Color
+  
+  var body: some View {
+    VStack {
+      Image(systemName: "list.bullet")
+        .foregroundColor(.white)
+    }
+    .padding(12)
+    .background(color)
+    .clipShape(Circle())
+  }
+}
+
+struct CircularImageView_Previews: PreviewProvider {
+    static var previews: some View {
+      CircularImageView(color: .red)
+    }
+}
