@@ -2,10 +2,24 @@ import SwiftUI
 
 struct RemindersView: View {
   @State var isShowingCreateModal: Bool = false
+  @State var isShowingTagsModel: Bool = false
+
+  @Environment(\.managedObjectContext) var viewContext
+
   var fetchRequest: FetchRequest<Reminder>
   var reminders: FetchedResults<Reminder> { return fetchRequest.wrappedValue }
   
   let reminderList: ReminderList
+  
+  var tags: Array<Tag> {
+    let tagsSet = reminderList.reminders.compactMap({ $0.tags }).reduce(Set<Tag>(), { (result, tags) in
+      var result = result
+      result.formUnion(tags)
+      return result
+    })
+    
+    return Array(tagsSet)
+  }
   
   var body: some View {
     VStack {
@@ -24,6 +38,13 @@ struct RemindersView: View {
       .padding(.leading)
     }
     .navigationBarTitle(Text("Reminders"))
+    .navigationBarItems(trailing:
+                          Button(action: { self.isShowingTagsModel.toggle() }) {
+                            Text("Tags")
+                          }.sheet(isPresented: self.$isShowingTagsModel, content: {
+                            TagsView(tags: self.tags).environment(\.managedObjectContext, self.viewContext)
+                          })
+    )
   }
   
   init(reminderList: ReminderList) {

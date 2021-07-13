@@ -8,7 +8,7 @@ extension Tag {
         return NSFetchRequest<Tag>(entityName: "Tag")
     }
 
-    @NSManaged public var title: String?
+    @NSManaged public var title: String
     @NSManaged public var reminders: Set<Reminder>
   
   static func fetchOrCreateWith(title: String, in context: NSManagedObjectContext) -> Tag {
